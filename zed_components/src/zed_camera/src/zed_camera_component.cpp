@@ -3207,54 +3207,54 @@ void ZedCamera::initPublishers()
   // <---- Topics names definition
 
   // ----> Camera publishers
-  mPubRgb =
-    image_transport::create_camera_publisher(this, rgb_topic, mVideoQos.get_rmw_qos_profile());
-  RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRgb.getTopic());
-  RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRgb.getInfoTopic());
-  mPubRgbGray =
-    image_transport::create_camera_publisher(this, rgb_gray_topic, mVideoQos.get_rmw_qos_profile());
-  RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRgbGray.getTopic());
-  RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRgbGray.getInfoTopic());
-  mPubRawRgb =
-    image_transport::create_camera_publisher(this, rgb_raw_topic, mVideoQos.get_rmw_qos_profile());
-  RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawRgb.getTopic());
-  RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawRgb.getInfoTopic());
-  mPubRawRgbGray = image_transport::create_camera_publisher(
-    this, rgb_raw_gray_topic, mVideoQos.get_rmw_qos_profile());
-  RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawRgbGray.getTopic());
-  RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawRgbGray.getInfoTopic());
+  // mPubRgb =
+  //   image_transport::create_camera_publisher(this, rgb_topic, mVideoQos.get_rmw_qos_profile());
+  // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRgb.getTopic());
+  // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRgb.getInfoTopic());
+  // mPubRgbGray =
+  //   image_transport::create_camera_publisher(this, rgb_gray_topic, mVideoQos.get_rmw_qos_profile());
+  // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRgbGray.getTopic());
+  // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRgbGray.getInfoTopic());
+  // mPubRawRgb =
+  //   image_transport::create_camera_publisher(this, rgb_raw_topic, mVideoQos.get_rmw_qos_profile());
+  // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawRgb.getTopic());
+  // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawRgb.getInfoTopic());
+  // mPubRawRgbGray = image_transport::create_camera_publisher(
+  //   this, rgb_raw_gray_topic, mVideoQos.get_rmw_qos_profile());
+  // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawRgbGray.getTopic());
+  // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawRgbGray.getInfoTopic());
   mPubLeft =
     image_transport::create_camera_publisher(this, left_topic, mVideoQos.get_rmw_qos_profile());
   RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubLeft.getTopic());
   RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubLeft.getInfoTopic());
-  mPubLeftGray = image_transport::create_camera_publisher(
-    this, left_gray_topic, mVideoQos.get_rmw_qos_profile());
-  RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubLeftGray.getTopic());
-  RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubLeftGray.getInfoTopic());
-  mPubRawLeft =
-    image_transport::create_camera_publisher(this, left_raw_topic, mVideoQos.get_rmw_qos_profile());
-  RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawLeft.getTopic());
-  RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawLeft.getInfoTopic());
-  mPubRawLeftGray = image_transport::create_camera_publisher(
-    this, left_raw_gray_topic, mVideoQos.get_rmw_qos_profile());
-  RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawLeftGray.getTopic());
-  RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawLeftGray.getInfoTopic());
+  // mPubLeftGray = image_transport::create_camera_publisher(
+  //   this, left_gray_topic, mVideoQos.get_rmw_qos_profile());
+  // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubLeftGray.getTopic());
+  // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubLeftGray.getInfoTopic());
+  // mPubRawLeft =
+  //   image_transport::create_camera_publisher(this, left_raw_topic, mVideoQos.get_rmw_qos_profile());
+  // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawLeft.getTopic());
+  // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawLeft.getInfoTopic());
+  // mPubRawLeftGray = image_transport::create_camera_publisher(
+  //   this, left_raw_gray_topic, mVideoQos.get_rmw_qos_profile());
+  // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawLeftGray.getTopic());
+  // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawLeftGray.getInfoTopic());
   mPubRight =
     image_transport::create_camera_publisher(this, right_topic, mVideoQos.get_rmw_qos_profile());
   RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRight.getTopic());
   RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRight.getInfoTopic());
-  mPubRightGray = image_transport::create_camera_publisher(
-    this, right_gray_topic, mVideoQos.get_rmw_qos_profile());
-  RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRightGray.getTopic());
-  RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRightGray.getInfoTopic());
-  mPubRawRight = image_transport::create_camera_publisher(
-    this, right_raw_topic, mVideoQos.get_rmw_qos_profile());
-  RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawRight.getTopic());
-  RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawRight.getInfoTopic());
-  mPubRawRightGray = image_transport::create_camera_publisher(
-    this, right_raw_gray_topic, mVideoQos.get_rmw_qos_profile());
-  RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawRightGray.getTopic());
-  RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawRightGray.getInfoTopic());
+  // mPubRightGray = image_transport::create_camera_publisher(
+  //   this, right_gray_topic, mVideoQos.get_rmw_qos_profile());
+  // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRightGray.getTopic());
+  // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRightGray.getInfoTopic());
+  // mPubRawRight = image_transport::create_camera_publisher(
+  //   this, right_raw_topic, mVideoQos.get_rmw_qos_profile());
+  // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawRight.getTopic());
+  // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawRight.getInfoTopic());
+  // mPubRawRightGray = image_transport::create_camera_publisher(
+  //   this, right_raw_gray_topic, mVideoQos.get_rmw_qos_profile());
+  // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawRightGray.getTopic());
+  // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawRightGray.getInfoTopic());
 
   if (!mDepthDisabled) {
     mPubDepth =
@@ -3266,20 +3266,20 @@ void ZedCamera::initPublishers()
     RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubDepthInfo->get_topic_name());
   }
 
-  mPubStereo =
-    image_transport::create_publisher(this, stereo_topic, mVideoQos.get_rmw_qos_profile());
-  RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubStereo.getTopic());
-  mPubRawStereo =
-    image_transport::create_publisher(this, stereo_raw_topic, mVideoQos.get_rmw_qos_profile());
-  RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawStereo.getTopic());
+  // mPubStereo =
+  //   image_transport::create_publisher(this, stereo_topic, mVideoQos.get_rmw_qos_profile());
+  // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubStereo.getTopic());
+  // mPubRawStereo =
+  //   image_transport::create_publisher(this, stereo_raw_topic, mVideoQos.get_rmw_qos_profile());
+  // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubRawStereo.getTopic());
   // <---- Camera publishers
 
   // ----> Depth publishers
   if (!mDepthDisabled) {
-    mPubConfMap = create_publisher<sensor_msgs::msg::Image>(conf_map_topic, mDepthQos);
-    RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubConfMap->get_topic_name());
-    mPubDisparity = create_publisher<stereo_msgs::msg::DisparityImage>(disparity_topic, mDepthQos);
-    RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubDisparity->get_topic_name());
+    // mPubConfMap = create_publisher<sensor_msgs::msg::Image>(conf_map_topic, mDepthQos);
+    // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubConfMap->get_topic_name());
+    // mPubDisparity = create_publisher<stereo_msgs::msg::DisparityImage>(disparity_topic, mDepthQos);
+    // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubDisparity->get_topic_name());
     mPubCloud = create_publisher<sensor_msgs::msg::PointCloud2>(pointcloud_topic, mDepthQos);
     RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubCloud->get_topic_name());
   }
@@ -3337,14 +3337,14 @@ void ZedCamera::initPublishers()
           mFusedPcPubRate << " Hz");
     }
 
-    std::string marker_topic = "plane_marker";
-    std::string plane_topic = "plane";
-    // Rviz markers publisher
-    mPubMarker = create_publisher<visualization_msgs::msg::Marker>(marker_topic, mMappingQos);
-    RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubMarker->get_topic_name());
-    // Detected planes publisher
-    mPubPlane = create_publisher<zed_interfaces::msg::PlaneStamped>(plane_topic, mMappingQos);
-    RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubPlane->get_topic_name());
+    // std::string marker_topic = "plane_marker";
+    // std::string plane_topic = "plane";
+    // // Rviz markers publisher
+    // mPubMarker = create_publisher<visualization_msgs::msg::Marker>(marker_topic, mMappingQos);
+    // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubMarker->get_topic_name());
+    // // Detected planes publisher
+    // mPubPlane = create_publisher<zed_interfaces::msg::PlaneStamped>(plane_topic, mMappingQos);
+    // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: " << mPubPlane->get_topic_name());
   }
   // <---- Mapping
 
@@ -6124,26 +6124,26 @@ bool ZedCamera::areVideoDepthSubscribed()
   mDepthInfoSubnumber = 0;
 
   try {
-    mRgbSubnumber = mPubRgb.getNumSubscribers();
-    mRgbRawSubnumber = mPubRawRgb.getNumSubscribers();
-    mRgbGraySubnumber = mPubRgbGray.getNumSubscribers();
-    mRgbGrayRawSubnumber = mPubRawRgbGray.getNumSubscribers();
+    // mRgbSubnumber = mPubRgb.getNumSubscribers();
+    // mRgbRawSubnumber = mPubRawRgb.getNumSubscribers();
+    // mRgbGraySubnumber = mPubRgbGray.getNumSubscribers();
+    // mRgbGrayRawSubnumber = mPubRawRgbGray.getNumSubscribers();
     mLeftSubnumber = mPubLeft.getNumSubscribers();
-    mLeftRawSubnumber = mPubRawLeft.getNumSubscribers();
-    mLeftGraySubnumber = mPubLeftGray.getNumSubscribers();
-    mLeftGrayRawSubnumber = mPubRawLeftGray.getNumSubscribers();
+    // mLeftRawSubnumber = mPubRawLeft.getNumSubscribers();
+    // mLeftGraySubnumber = mPubLeftGray.getNumSubscribers();
+    // mLeftGrayRawSubnumber = mPubRawLeftGray.getNumSubscribers();
     mRightSubnumber = mPubRight.getNumSubscribers();
-    mRightRawSubnumber = mPubRawRight.getNumSubscribers();
-    mRightGraySubnumber = mPubRightGray.getNumSubscribers();
-    mRightGrayRawSubnumber = mPubRawRightGray.getNumSubscribers();
-    mStereoSubnumber = mPubStereo.getNumSubscribers();
-    mStereoRawSubnumber = mPubRawStereo.getNumSubscribers();
+    // mRightRawSubnumber = mPubRawRight.getNumSubscribers();
+    // mRightGraySubnumber = mPubRightGray.getNumSubscribers();
+    // mRightGrayRawSubnumber = mPubRawRightGray.getNumSubscribers();
+    // mStereoSubnumber = mPubStereo.getNumSubscribers();
+    // mStereoRawSubnumber = mPubRawStereo.getNumSubscribers();
 
     if (!mDepthDisabled) {
       mDepthSubnumber = mPubDepth.getNumSubscribers();
       mDepthInfoSubnumber = count_subscribers(mPubDepthInfo->get_topic_name());
-      mConfMapSubnumber = count_subscribers(mPubConfMap->get_topic_name());
-      mDisparitySubnumber = count_subscribers(mPubDisparity->get_topic_name());
+      // mConfMapSubnumber = count_subscribers(mPubConfMap->get_topic_name());
+      // mDisparitySubnumber = count_subscribers(mPubDisparity->get_topic_name());
     }
   } catch (...) {
     rcutils_reset_error();
@@ -7477,8 +7477,8 @@ bool ZedCamera::isDepthRequired()
 
   try {
     depthSub = mPubDepth.getNumSubscribers();
-    confMapSub = count_subscribers(mPubConfMap->get_topic_name());
-    dispSub = count_subscribers(mPubDisparity->get_topic_name());
+    // confMapSub = count_subscribers(mPubConfMap->get_topic_name());
+    // dispSub = count_subscribers(mPubDisparity->get_topic_name());
     pcSub = count_subscribers(mPubCloud->get_topic_name());
     depthInfoSub = count_subscribers(mPubDepthInfo->get_topic_name());
 
