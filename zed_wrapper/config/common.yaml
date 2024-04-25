@@ -83,7 +83,7 @@
             transform_time_offset: 0.0 # The value added to the timestamp of `map->odom` and `odom->camera_link` transform being generated
             qos_history: 1 # '1': KEEP_LAST - '2': KEEP_ALL
             qos_depth: 1 # Queue size if using KEEP_LAST
-            qos_reliability: 1 # '1': RELIABLE - '2': BEST_EFFORT
+            qos_reliability: 2 # '1': RELIABLE - '2': BEST_EFFORT
             qos_durability: 2 # '1': TRANSIENT_LOCAL - '2': VOLATILE
 
         gnss_fusion:
@@ -111,16 +111,16 @@
             pd_normal_similarity_threshold:  15.0 # Plane detection: controls the spread of plane by checking the angle difference.
             qos_history: 1 # '1': KEEP_LAST - '2': KEEP_ALL
             qos_depth: 1 # Queue size if using KEEP_LAST
-            qos_reliability: 1 # '1': RELIABLE - '2': BEST_EFFORT -
+            qos_reliability: 2 # '1': RELIABLE - '2': BEST_EFFORT -
             qos_durability: 2 # '1': TRANSIENT_LOCAL - '2': VOLATILE
 
         sensors:
             publish_imu_tf: true # [usually overwritten by launch file] enable/disable the IMU TF broadcasting
             sensors_image_sync: false # Synchronize Sensors messages with latest published video/depth message
-            sensors_pub_rate: 200. # frequency of publishing of sensors data. MAX: 400. - MIN: grab rate
+            sensors_pub_rate: 10. # frequency of publishing of sensors data. MAX: 400. - MIN: grab rate
             qos_history: 1 # '1': KEEP_LAST - '2': KEEP_ALL
             qos_depth: 1 # Queue size if using KEEP_LAST
-            qos_reliability: 1 # '1': RELIABLE - '2': BEST_EFFORT -
+            qos_reliability: 2 # '1': RELIABLE - '2': BEST_EFFORT -
             qos_durability: 2 # '1': TRANSIENT_LOCAL - '2': VOLATILE
 
         object_detection:
@@ -140,7 +140,7 @@
             mc_sport: true # [DYNAMIC] - Enable/disable the detection of sport-related objects for 'MULTI_CLASS_X' models            
             qos_history: 1 # '1': KEEP_LAST - '2': KEEP_ALL
             qos_depth: 1 # Queue size if using KEEP_LAST
-            qos_reliability: 1 # '1': RELIABLE - '2': BEST_EFFORT
+            qos_reliability: 2 # '1': RELIABLE - '2': BEST_EFFORT
             qos_durability: 2 # '1': TRANSIENT_LOCAL - '2': VOLATILE
         
         body_tracking:
@@ -157,7 +157,7 @@
             minimum_keypoints_threshold: 5 # [DYNAMIC] - Minimum number of skeleton key points to be detected for a valid skeleton
             qos_history: 1 # '1': KEEP_LAST - '2': KEEP_ALL
             qos_depth: 1 # Queue size if using KEEP_LAST
-            qos_reliability: 1 # '1': RELIABLE - '2': BEST_EFFORT
+            qos_reliability: 2 # '1': RELIABLE - '2': BEST_EFFORT
             qos_durability: 2 # '1': TRANSIENT_LOCAL - '2': VOLATILE
 
         advanced: # WARNING: do not modify unless you are confident of what you are doing
